@@ -1,7 +1,5 @@
 package Persons;
 
-import Persons.Components.Healgth;
-
 /**
  * Created by Вадег on 24.08.2016.
  */

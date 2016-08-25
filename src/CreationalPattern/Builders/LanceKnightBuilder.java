@@ -1,6 +1,6 @@
 package CreationalPattern.Builders;
 
-import Persons.Components.Healgth;
+import Persons.Components.Health;
 import Persons.Components.Skils.Male.HitHalebard;
 import Persons.Person;
 import Persons.Warior;
@@ -29,12 +29,12 @@ public class LanceKnightBuilder extends Warior implements IBuilder
     }
 
     @Override
-    public void setHealgth(Healgth healgth) {
-        super.setHealgth(healgth);
+    public void setHealth(Health health) {
+        super.setHealth(health);
     }
 
     public LanceKnightBuilder(String name, int lvl, int speed ) {
-        this.setHealgth(new Healgth(7*lvl));
+        this.setHealth(new Health(7*lvl));
         this.setSpeed(speed);
         this.setLvl(lvl);
         this.setName(name);

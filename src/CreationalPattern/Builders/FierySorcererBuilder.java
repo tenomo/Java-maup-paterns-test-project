@@ -1,6 +1,6 @@
 package CreationalPattern.Builders;
 
-import Persons.Components.Healgth;
+import Persons.Components.Health;
 import Persons.Components.Skils.Magic.FireBall;
 import Persons.Person;
 import Persons.Sorcerer;
@@ -27,12 +27,12 @@ public class FierySorcererBuilder extends Sorcerer implements IBuilder
     }
 
     @Override
-    public void setHealgth(Healgth healgth) {
-        super.setHealgth(healgth);
+    public void setHealth(Health health) {
+        super.setHealth(health);
     }
 
     public FierySorcererBuilder(String name, int lvl, int speed ) {
-        this.setHealgth(new Healgth(5*lvl));
+        this.setHealth(new Health(5*lvl));
         this.setSpeed(speed);
         this.setLvl(lvl);
         this.setName(name);

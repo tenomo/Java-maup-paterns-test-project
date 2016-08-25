@@ -1,6 +1,6 @@
 package CreationalPattern.Builders;
 
-import Persons.Components.Healgth;
+import Persons.Components.Health;
 import Persons.Components.Skils.Archer.Shoot;
 import Persons.Hunter;
 import Persons.Person;
@@ -27,12 +27,12 @@ public class HunterBuilder extends Hunter implements IBuilder
     }
 
     @Override
-    public void setHealgth(Healgth healgth) {
-        super.setHealgth(healgth);
+    public void setHealth(Health health) {
+        super.setHealth(health);
     }
 
     public HunterBuilder(String name, int lvl, int speed ) {
-        this.setHealgth(new Healgth(5*lvl));
+        this.setHealth(new Health(5*lvl));
         this.setSpeed(speed);
         this.setLvl(lvl);
         this.setName(name);

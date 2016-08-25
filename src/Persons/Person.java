@@ -1,6 +1,6 @@
 package Persons;
 
-import Persons.Components.Healgth;
+import Persons.Components.Health;
 import Persons.Components.Skils.ISkill;
 
 public abstract class Person
@@ -9,7 +9,7 @@ public abstract class Person
     protected String name;
     protected int lvl;
     protected Person target;
-    protected Healgth healgth;
+    protected Health health;
 
     protected ISkill skill;
 
@@ -47,9 +47,9 @@ public abstract class Person
         return lvl;
     }
 
-    public Healgth getHealgth() {
+    public Health getHealth() {
 
-        return healgth;
+        return health;
     }
 
     public ISkill getSkill() {
@@ -60,8 +60,8 @@ public abstract class Person
         this.skill = skill;
     }
 
-    protected void setHealgth(Healgth healgth) {
-        this.healgth = healgth;
+    protected void setHealth(Health health) {
+        this.health = health;
     }
 
     public Person getTarget() {

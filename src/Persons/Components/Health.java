@@ -3,7 +3,7 @@ package Persons.Components;
 /**
  * Created by Вадег on 24.08.2016.
  */
-public class Healgth
+public class Health
 {
     private int HelghtPoints;
 
@@ -16,7 +16,7 @@ public class Healgth
         return HelghtPoints;
     }
 
-    public Healgth(int helghtPoints) {
+    public Health(int helghtPoints) {
         HelghtPoints = helghtPoints;
     }
 }
