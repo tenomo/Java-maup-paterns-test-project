@@ -5,9 +5,7 @@ import Persons.Components.Skils.Archer.Shoot;
 import Persons.Hunter;
 import Persons.Person;
 
-/**
- * Created by tenom on 25.08.2016.
- */
+
 public class HunterBuilder extends Hunter implements IBuilder
 {
 

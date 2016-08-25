@@ -10,7 +10,6 @@ public abstract class Person
     protected int lvl;
     protected Person target;
     protected Health health;
-
     protected ISkill skill;
 
 
