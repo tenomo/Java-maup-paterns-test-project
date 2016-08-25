@@ -1,41 +1,39 @@
 package Persons;
 
 import Persons.Components.Healgth;
+import Persons.Components.Skils.Skill;
 
 public abstract class Person
 {
+    protected int speed;
+    protected String name;
+    protected int lvl;
+    protected Character target;
+    protected Healgth healgth;
 
-
-    private int speed;
-    private String name;
-    private int lvl;
-    private Character target;
-    private Healgth healgth;
-
-
-
-    public Character getTarget() {
-
-        return target;
-    }
+    protected Skill skill;
 
 
 
-    private void setSpeed(int speed) {
+
+
+    protected  void setSpeed(int speed) {
         this.speed = speed;
     }
 
-    private void setName(String name) {
+    protected void setName(String name) {
         this.name = name;
     }
 
-    private void setLvl(int lvl) {
+    protected void setLvl(int lvl) {
         this.lvl = lvl;
     }
 
-    public void setTarget(Character target) {
+    protected void setTarget(Character target) {
         this.target = target;
     }
+
+
 
     public int getSpeed() {
     return speed;
@@ -52,5 +50,22 @@ public abstract class Person
     public Healgth getHealgth() {
 
         return healgth;
+    }
+
+    public Skill getSkill() {
+        return skill;
+    }
+
+    protected void setSkill(Skill skill) {
+        this.skill = skill;
+    }
+
+    protected void setHealgth(Healgth healgth) {
+        this.healgth = healgth;
+    }
+
+    public Character getTarget() {
+
+        return target;
     }
 }

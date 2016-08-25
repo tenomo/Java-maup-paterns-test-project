@@ -8,6 +8,10 @@ import Persons.Person;
  */
 public class IceArrow extends Skill {
 
+    public IceArrow(int power) {
+        super(power);
+    }
+
     @Override
     public void Use(Person target) {
         System.out.println("Целе" + target.getName()+" нанесено " + this.power + " урона ледяной стрелой...");

@@ -8,8 +8,12 @@ import Persons.Person;
  */
 public class Shoot extends Skill {
 
+    public Shoot(int power) {
+        super(power);
+    }
+
     @Override
     public void Use(Person target) {
-        System.out.println("Целе" + target.getName()+" нанесено " + this.power + " урона выстрелом из лука...");
+        System.out.println("Целе " + target.getName()+" нанесено " + this.power + " урона выстрелом из лука...");
     }
 }

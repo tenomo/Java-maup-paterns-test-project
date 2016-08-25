@@ -8,6 +8,10 @@ import Persons.Person;
  */
 public class FireBall extends Skill {
 
+    public FireBall(int power) {
+        super(power);
+    }
+
     @Override
     public void Use(Person target) {
         System.out.println("Целе" + target.getName()+" нанесено " + this.power + " урона огненым шаром...");
