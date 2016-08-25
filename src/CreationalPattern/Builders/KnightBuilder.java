@@ -1,14 +1,14 @@
-package Persons.Builders;
+package CreationalPattern.Builders;
 
 import Persons.Components.Healgth;
-import Persons.Components.Skils.Archer.Shoot;
-import Persons.Hunter;
+import Persons.Components.Skils.Male.HitSword;
 import Persons.Person;
+import Persons.Warior;
 
 /**
  * Created by tenom on 25.08.2016.
  */
-public class Knight extends Hunter
+public class KnightBuilder extends Warior implements IBuilder
 {
 
     @Override
@@ -31,17 +31,17 @@ public class Knight extends Hunter
         super.setHealgth(healgth);
     }
 
-    public Knight(String name, int lvl, int speed, int helgthPoins) {
-        this.setHealgth(new Healgth(helgthPoins));
+    public KnightBuilder(String name, int lvl, int speed ) {
+        this.setHealgth(new Healgth(7*lvl));
         this.setSpeed(speed);
         this.setLvl(lvl);
         this.setName(name);
-        this.skill = new Shoot(powerSkill * lvl);
+        this.skill = new HitSword(powerSkill * lvl);
     }
 
     public Person Build()
     {
-        this.setName(name + " Hunter");
+        this.setName(name + " Kinght");
         return  this;
     }
 }

@@ -1,4 +1,4 @@
-package Persons.Builders;
+package CreationalPattern.Builders;
 
 import Persons.Components.Healgth;
 import Persons.Components.Skils.Archer.Shoot;
@@ -8,7 +8,7 @@ import Persons.Person;
 /**
  * Created by tenom on 25.08.2016.
  */
-public class IceSorcererBuilder extends Hunter
+public class HunterBuilder extends Hunter implements IBuilder
 {
 
     @Override
@@ -31,8 +31,8 @@ public class IceSorcererBuilder extends Hunter
         super.setHealgth(healgth);
     }
 
-    public IceSorcererBuilder(String name, int lvl, int speed, int helgthPoins) {
-        this.setHealgth(new Healgth(helgthPoins));
+    public HunterBuilder(String name, int lvl, int speed ) {
+        this.setHealgth(new Healgth(5*lvl));
         this.setSpeed(speed);
         this.setLvl(lvl);
         this.setName(name);
@@ -41,7 +41,7 @@ public class IceSorcererBuilder extends Hunter
 
     public Person Build()
     {
-        this.setName(name + " Fiery Sorcerer");
+        this.setName(name + " Hunter");
         return  this;
     }
 }

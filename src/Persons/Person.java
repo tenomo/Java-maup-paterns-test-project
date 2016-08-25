@@ -1,7 +1,7 @@
 package Persons;
 
 import Persons.Components.Healgth;
-import Persons.Components.Skils.Skill;
+import Persons.Components.Skils.ISkill;
 
 public abstract class Person
 {
@@ -11,7 +11,7 @@ public abstract class Person
     protected Character target;
     protected Healgth healgth;
 
-    protected Skill skill;
+    protected ISkill skill;
 
 
 
@@ -52,11 +52,11 @@ public abstract class Person
         return healgth;
     }
 
-    public Skill getSkill() {
+    public ISkill getSkill() {
         return skill;
     }
 
-    protected void setSkill(Skill skill) {
+    protected void setSkill(ISkill skill) {
         this.skill = skill;
     }
 

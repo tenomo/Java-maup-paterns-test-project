@@ -1,14 +1,14 @@
-package Persons.Builders;
+package CreationalPattern.Builders;
 
 import Persons.Components.Healgth;
-import Persons.Components.Skils.Archer.Shoot;
-import Persons.Hunter;
+import Persons.Components.Skils.Magic.IceArrow;
 import Persons.Person;
+import Persons.Sorcerer;
 
 /**
  * Created by tenom on 25.08.2016.
  */
-public class LanceKnight extends Hunter
+public class IceSorcererBuilder extends Sorcerer implements IBuilder
 {
 
     @Override
@@ -31,17 +31,17 @@ public class LanceKnight extends Hunter
         super.setHealgth(healgth);
     }
 
-    public LanceKnight(String name, int lvl, int speed, int helgthPoins) {
-        this.setHealgth(new Healgth(helgthPoins));
+    public IceSorcererBuilder(String name, int lvl, int speed ) {
+        this.setHealgth(new Healgth(5*lvl));
         this.setSpeed(speed);
         this.setLvl(lvl);
         this.setName(name);
-        this.skill = new Shoot(powerSkill * lvl);
+        this.skill = new IceArrow(powerSkill * lvl);
     }
 
     public Person Build()
     {
-        this.setName(name + " Hunter");
+        this.setName(name + " Ice Sorcerer");
         return  this;
     }
 }

@@ -1,15 +1,17 @@
-package Persons.Builders;
+package CreationalPattern.Builders;
 
 import Persons.Components.Healgth;
-import Persons.Components.Skils.Archer.Shoot;
-import Persons.Hunter;
+import Persons.Components.Skils.Male.HitHalebard;
 import Persons.Person;
+import Persons.Warior;
 
 /**
  * Created by tenom on 25.08.2016.
  */
-public class FierySorcererBuilder extends Hunter
+public class LanceKnightBuilder extends Warior implements IBuilder
 {
+
+
 
     @Override
     public void setLvl(int lvl) {
@@ -31,17 +33,17 @@ public class FierySorcererBuilder extends Hunter
         super.setHealgth(healgth);
     }
 
-    public FierySorcererBuilder(String name, int lvl, int speed, int helgthPoins) {
-        this.setHealgth(new Healgth(helgthPoins));
+    public LanceKnightBuilder(String name, int lvl, int speed ) {
+        this.setHealgth(new Healgth(7*lvl));
         this.setSpeed(speed);
         this.setLvl(lvl);
         this.setName(name);
-        this.skill = new Shoot(powerSkill * lvl);
+        this.skill = new HitHalebard(powerSkill * lvl);
     }
 
     public Person Build()
     {
-        this.setName(name + " Fiery Sorcerer");
+        this.setName(name + " Lance Kinght");
         return  this;
     }
 }

@@ -1,4 +1,4 @@
-package Persons.Components.Skils.Magic;
+package Persons.Components.Skils.Male;
 
 import Persons.Components.Skils.ISkill;
 import Persons.Person;
@@ -6,11 +6,11 @@ import Persons.Person;
 /**
  * Created by Вадег on 24.08.2016.
  */
-public class FireBall implements ISkill {
+public class HitHalebard implements ISkill {
 
     int power = 0;
 
-    public FireBall(int power ) {
+    public HitHalebard(int power ) {
         this.power = power;
     }
     @Override
@@ -22,9 +22,10 @@ public class FireBall implements ISkill {
     public int getPower() {
         return power;
     }
-
     @Override
     public void Use(Person target) {
-        System.out.println("Целе " + target.getName()+" нанесено " + this.power + " урона огненым шаром...");
+        System.out.println("Целе " + target.getName()+" нанесено " + this.power + " урона ударом меча...");
     }
 }
+
+
