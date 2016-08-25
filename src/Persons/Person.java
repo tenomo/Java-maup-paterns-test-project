@@ -8,7 +8,7 @@ public abstract class Person
     protected int speed;
     protected String name;
     protected int lvl;
-    protected Character target;
+    protected Person target;
     protected Healgth healgth;
 
     protected ISkill skill;
@@ -29,7 +29,7 @@ public abstract class Person
         this.lvl = lvl;
     }
 
-    protected void setTarget(Character target) {
+    protected void setTarget(Person target) {
         this.target = target;
     }
 
@@ -64,7 +64,7 @@ public abstract class Person
         this.healgth = healgth;
     }
 
-    public Character getTarget() {
+    public Person getTarget() {
 
         return target;
     }
